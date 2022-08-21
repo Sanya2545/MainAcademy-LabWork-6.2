@@ -1,0 +1,22 @@
+c:\users\msibook\documents\visual studio 2013\Projects\Hello_tasks_stud\Hello_tasks_stud\bin\Debug\Hello_tasks_stud.exe.config
+c:\users\msibook\documents\visual studio 2013\Projects\Hello_tasks_stud\Hello_tasks_stud\bin\Debug\Hello_tasks_stud.exe
+c:\users\msibook\documents\visual studio 2013\Projects\Hello_tasks_stud\Hello_tasks_stud\bin\Debug\Hello_tasks_stud.pdb
+c:\users\msibook\documents\visual studio 2013\Projects\Hello_tasks_stud\Hello_tasks_stud\obj\Debug\Hello_tasks_stud.exe
+c:\users\msibook\documents\visual studio 2013\Projects\Hello_tasks_stud\Hello_tasks_stud\obj\Debug\Hello_tasks_stud.pdb
+C:\Users\win7\Documents\Visual Studio 2013\Projects\Hello_tasks_stud\Hello_tasks_stud\bin\Debug\Hello_tasks_stud.exe.config
+C:\Users\win7\Documents\Visual Studio 2013\Projects\Hello_tasks_stud\Hello_tasks_stud\obj\Debug\Hello_tasks_stud.exe
+C:\Users\win7\Documents\Visual Studio 2013\Projects\Hello_tasks_stud\Hello_tasks_stud\obj\Debug\Hello_tasks_stud.pdb
+C:\Users\win7\Documents\Visual Studio 2013\Projects\Hello_tasks_stud\Hello_tasks_stud\bin\Debug\Hello_tasks_stud.exe
+C:\Users\win7\Documents\Visual Studio 2013\Projects\Hello_tasks_stud\Hello_tasks_stud\bin\Debug\Hello_tasks_stud.pdb
+C:\Users\win7\Documents\Visual Studio 2013\Projects\Hello_tasks_stud\Hello_tasks_stud\obj\Debug\Hello_tasks_stud.csprojResolveAssemblyReference.cache
+D:\naukma_2014_2015\Brainbasket\BRAINBASKET\Group_09032016\150416_17\Lab_1_6_2\HelloTasks_bysteps_\End\Hello_tasks_stud\Hello_tasks_stud\bin\Debug\Hello_tasks_stud.exe.config
+D:\naukma_2014_2015\Brainbasket\BRAINBASKET\Group_09032016\150416_17\Lab_1_6_2\HelloTasks_bysteps_\End\Hello_tasks_stud\Hello_tasks_stud\obj\Debug\Hello_tasks_stud.exe
+D:\naukma_2014_2015\Brainbasket\BRAINBASKET\Group_09032016\150416_17\Lab_1_6_2\HelloTasks_bysteps_\End\Hello_tasks_stud\Hello_tasks_stud\obj\Debug\Hello_tasks_stud.pdb
+D:\naukma_2014_2015\Brainbasket\BRAINBASKET\Group_09032016\150416_17\Lab_1_6_2\HelloTasks_bysteps_\End\Hello_tasks_stud\Hello_tasks_stud\bin\Debug\Hello_tasks_stud.exe
+D:\naukma_2014_2015\Brainbasket\BRAINBASKET\Group_09032016\150416_17\Lab_1_6_2\HelloTasks_bysteps_\End\Hello_tasks_stud\Hello_tasks_stud\bin\Debug\Hello_tasks_stud.pdb
+D:\naukma_2014_2015\Brainbasket\BRAINBASKET\Group_09032016\150416_17\Lab_1_6_2\HelloTasks_bysteps_\End\Hello_tasks_stud\Hello_tasks_stud\obj\Debug\Hello_tasks_stud.csprojResolveAssemblyReference.cache
+D:\naukma_2014_2015\Brainbasket\BRAINBASKET\Group_09032016\180416_18\Lab_1_6_2\HelloTasks_bysteps_\Begin\Hello_tasks_stud\Hello_tasks_stud\bin\Debug\Hello_tasks_stud.exe.config
+D:\naukma_2014_2015\Brainbasket\BRAINBASKET\Group_09032016\180416_18\Lab_1_6_2\HelloTasks_bysteps_\Begin\Hello_tasks_stud\Hello_tasks_stud\obj\Debug\Hello_tasks_stud.exe
+D:\naukma_2014_2015\Brainbasket\BRAINBASKET\Group_09032016\180416_18\Lab_1_6_2\HelloTasks_bysteps_\Begin\Hello_tasks_stud\Hello_tasks_stud\obj\Debug\Hello_tasks_stud.pdb
+D:\naukma_2014_2015\Brainbasket\BRAINBASKET\Group_09032016\180416_18\Lab_1_6_2\HelloTasks_bysteps_\Begin\Hello_tasks_stud\Hello_tasks_stud\bin\Debug\Hello_tasks_stud.exe
+D:\naukma_2014_2015\Brainbasket\BRAINBASKET\Group_09032016\180416_18\Lab_1_6_2\HelloTasks_bysteps_\Begin\Hello_tasks_stud\Hello_tasks_stud\bin\Debug\Hello_tasks_stud.pdb
