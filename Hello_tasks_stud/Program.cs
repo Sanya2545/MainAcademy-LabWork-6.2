@@ -43,10 +43,10 @@ namespace Hello_tasks_stud
 
                                 break;
                             case 3:
-                                Console.WriteLine("Factorial task async ");                               
+                                Console.WriteLine("Factorial task async ");
                                 Task t = Fact_async(3);
 
-                                t.Wait();                             
+                                t.Wait();
                                 break;
                             default:
                                 Console.WriteLine("Exit");
@@ -56,7 +56,7 @@ namespace Hello_tasks_stud
                     }
                     catch (System.Exception e)
                     {
-                        Console.WriteLine("Error: "+ e.Message);
+                        Console.WriteLine("Error: " + e.Message);
                     }
                     finally
                     {
@@ -77,25 +77,49 @@ namespace Hello_tasks_stud
         #region Fact_Async
 
         //Create async Task Fact_async(int j) to calculate and output factorial
-        async static Task Fact_async(int j)
+        async static Task<int> Fact_async(int j)
         {
+            CancellationTokenSource source = new CancellationTokenSource();
             // Create a cancellation token source
-
+            CancellationToken cancellationToken = source.Token;
             // Create a cancellation token 
-
+            int number = j;
+            Func<object, int> func = (object obj) =>
+            {
+                return number = Factorial(cancellationToken, number);
+            };
+            Action<object> action = (object obj) =>
+            {
+                Console.WriteLine("Task : {0}, Object : {1}, Thread : {2}", Task.CurrentId, obj.ToString(), Thread.CurrentThread);
+            };
+            cancellationToken.Register(action, source.IsCancellationRequested);
+            Task<int> task = Task<int>.Factory.StartNew(func, "Asyncronous task 2", cancellationToken);
+            
             // Register a delegate for a callback when a  cancellation request is made
-
             // Create a task with the cancellation token as argument as a lambda expression and the Factorial method
-
+            if (Console.ReadKey(true).Key == ConsoleKey.Escape)
+            {
+                source.Cancel();
+                cancelNotification();
+            }
             // If user presses Escape, request cancellation.
-
-                // Cancel task
-
-            // await task
-
-            // factorial value output 
-
+            Console.WriteLine($"Task Status : {task.Status}");
+            source.Dispose();
+            return await task;
+            // Cancel task
         }
+
+
+
+
+        // If user presses Escape, request cancellation.
+
+        // Cancel task
+
+        // await task
+
+        // factorial value output 
+
         #endregion
 
         #region Fact_Cont
@@ -103,48 +127,91 @@ namespace Hello_tasks_stud
         //for factorial output to console
         static void Fact_cont(int j)
         {
+            CancellationTokenSource source = new CancellationTokenSource();
             // Create a cancellation token source
-
-            // Create a cancellation token
-
+            CancellationToken cancellationToken = source.Token;
+            int number = j;
+            // Create a cancellation token 
+            Task<int> task = new Task<int>((x) => { return Factorial(cancellationToken, number); }, cancellationToken);
             // Create a task with the cancellation token as argument as a lambda expression and the Factorial method
-
+            Action<object> action = (object obj) =>
+            {
+                Console.WriteLine("Task : {0}, Object : {1}, Thread : {2}", Task.CurrentId, obj.ToString(), Thread.CurrentThread);
+            };
+            Action<Task> DoOnSecond = (Task t) =>
+            {
+                if(t.IsCompleted)
+                {
+                    Console.WriteLine("Task #2 : is completed !");
+                }
+                Console.WriteLine("Task : {0}, Thread : {2}", Task.CurrentId, Thread.CurrentThread);
+            };
+            Action<Task> DoOnThird = (Task t) =>
+            {
+                if(t.IsCompleted)
+                {
+                    Console.WriteLine("Task #3 : is completed !");
+                }
+                Console.WriteLine("Task : {0}, Thread : {2}", Task.CurrentId, Thread.CurrentThread);
+            };
+            cancellationToken.Register(action, cancellationToken.IsCancellationRequested);
             // Register a delegate for a callback when a  cancellation request is made
-
+            task.RunSynchronously();
+            if (Console.ReadKey(true).Key == ConsoleKey.Escape)
+            {
+                source.Cancel();
+                cancelNotification();
+            }
             // If user presses Escape, request cancellation.
-
-                // Cancel task
-
+            Console.WriteLine($"Task Status : {task.Status}");
+            Action t2Act = () =>
+            {
+                Console.WriteLine("Task #2 started !");
+            };
+            Task t2 = task.ContinueWith(DoOnSecond);
+            
+            
+            Task t3 = t2.ContinueWith(DoOnThird);
             // Create continuation 2 tasks using lambda expressions 
             //with TaskContinuationOptions.OnlyOnRanToCompletion and  TaskContinuationOptions.NotOnRanToCompletion options
 
             // Task.WaitAll for these two tasks
 
             //IsCanceled properies output
-          
+
         }
         #endregion
-
         #region Factorial
         // Create void Fact_frk(int j) to calculate factorial
         static void Fact_frk(int j)
         {
+            CancellationTokenSource source = new CancellationTokenSource();
             // Create a cancellation token source
-
+            CancellationToken cancellationToken = source.Token;
+            int number = j;
             // Create a cancellation token 
-
+            Task<int> task = new Task<int>((x) => { return Factorial(cancellationToken, number); }, cancellationToken);
             // Create a task with the cancellation token as argument as a lambda expression and the Factorial method
-
+            Action<object> action = (object obj) =>
+            {
+                Console.WriteLine("Task : {0}, Object : {1}, Thread : {2}", Task.CurrentId, obj.ToString(), Thread.CurrentThread);
+            };
+            cancellationToken.Register(action, cancellationToken.IsCancellationRequested);
             // Register a delegate for a callback when a  cancellation request is made
-
-            // If user presses Escape, request cancellation.
-
-                // Cancel task
-
+            task.RunSynchronously();
+            if (Console.ReadKey(true).Key == ConsoleKey.Escape)
+            {
+                source.Cancel();
+                cancelNotification();
             }
-            //factorial value output 
+            // If user presses Escape, request cancellation.
+            Console.WriteLine($"Task Status : { task.Status}");
+            // Cancel task
+            source.Dispose();            
+
         }
-        
+        //factorial value output 
+
         #endregion
         static void cancelNotification()
         {
@@ -153,28 +220,38 @@ namespace Hello_tasks_stud
 
         // Create Facfactoristorial(CancellationToken ct, int num) to calculate recursively
         static int Factorial(CancellationToken ct, int num)
-        {
+        { 
+            ct.ThrowIfCancellationRequested();
             // throw if cancellation requested
-
+            if (num < 1)
+            {
+                return 1;
+            }
             //argument output 
-
+            if (ct.IsCancellationRequested)
+            {
+                Thread.Sleep(5000);
+                Console.WriteLine("Long work simulating !");
+                return num;
+            }
+            return (num < 1) ? 1 : num * Factorial(ct, num - 1);
             // create if block to check cancellation requested
 
-                //simulate long work
+            //simulate long work
 
-                //return recursive calculation of factorial 
-                //use multiplication to  PressAnyKey() method result to catch key press
+            //return recursive calculation of factorial 
+            //use multiplication to  PressAnyKey() method result to catch key press
 
             //return 0 
-        
+
         }
 
 
         #region Clava
 
         static int PressAnyKey()
-        {         
-            KeyboardSend.KeyDown(Keys.Back);          
+        {
+            KeyboardSend.KeyDown(Keys.Back);
             return 1;
         }
 

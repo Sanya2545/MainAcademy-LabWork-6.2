@@ -20,3 +20,10 @@ D:\naukma_2014_2015\Brainbasket\BRAINBASKET\Group_09032016\180416_18\Lab_1_6_2\H
 D:\naukma_2014_2015\Brainbasket\BRAINBASKET\Group_09032016\180416_18\Lab_1_6_2\HelloTasks_bysteps_\Begin\Hello_tasks_stud\Hello_tasks_stud\obj\Debug\Hello_tasks_stud.pdb
 D:\naukma_2014_2015\Brainbasket\BRAINBASKET\Group_09032016\180416_18\Lab_1_6_2\HelloTasks_bysteps_\Begin\Hello_tasks_stud\Hello_tasks_stud\bin\Debug\Hello_tasks_stud.exe
 D:\naukma_2014_2015\Brainbasket\BRAINBASKET\Group_09032016\180416_18\Lab_1_6_2\HelloTasks_bysteps_\Begin\Hello_tasks_stud\Hello_tasks_stud\bin\Debug\Hello_tasks_stud.pdb
+D:\MainAcademy\C# .NET\LabWorks_2\Module_2\LabWork#2.2\(begin)Hello_tasks_stud\Hello_tasks_stud\Hello_tasks_stud\bin\Debug\Hello_tasks_stud.exe.config
+D:\MainAcademy\C# .NET\LabWorks_2\Module_2\LabWork#2.2\(begin)Hello_tasks_stud\Hello_tasks_stud\Hello_tasks_stud\bin\Debug\Hello_tasks_stud.exe
+D:\MainAcademy\C# .NET\LabWorks_2\Module_2\LabWork#2.2\(begin)Hello_tasks_stud\Hello_tasks_stud\Hello_tasks_stud\bin\Debug\Hello_tasks_stud.pdb
+D:\MainAcademy\C# .NET\LabWorks_2\Module_2\LabWork#2.2\(begin)Hello_tasks_stud\Hello_tasks_stud\Hello_tasks_stud\obj\Debug\Hello_tasks_stud.csproj.AssemblyReference.cache
+D:\MainAcademy\C# .NET\LabWorks_2\Module_2\LabWork#2.2\(begin)Hello_tasks_stud\Hello_tasks_stud\Hello_tasks_stud\obj\Debug\Hello_tasks_stud.csproj.CoreCompileInputs.cache
+D:\MainAcademy\C# .NET\LabWorks_2\Module_2\LabWork#2.2\(begin)Hello_tasks_stud\Hello_tasks_stud\Hello_tasks_stud\obj\Debug\Hello_tasks_stud.exe
+D:\MainAcademy\C# .NET\LabWorks_2\Module_2\LabWork#2.2\(begin)Hello_tasks_stud\Hello_tasks_stud\Hello_tasks_stud\obj\Debug\Hello_tasks_stud.pdb
